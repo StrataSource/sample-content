@@ -1,0 +1,15 @@
+"test.distvar01"
+{
+	"channel"		"CHAN_AUTO"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_110DB"
+
+	// Start fading at 64 units, finish fade at 128 units
+	"distvariant"	"64, 128"
+
+	// Important!: This is required for distvariant to work
+	"soundentry_version"	"2"
+
+	"wave"			"^tests/distvar_test1.wav"
+}
+
