@@ -15,6 +15,6 @@ When you load the game, the sample assets will be present.
 
 ## License
 
-Everything in here is licensed permissively under MIT, unless explicitly stated otherwise.
+Unless explicitly stated otherwise, everything in here is in the public domain. You are free to use this public domain content without licensing notices.
 
 Some materials from sites such as PolyHaven may be under other permissive licenses.
