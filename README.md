@@ -2,6 +2,8 @@
 
 A collection of sample assets for Strata Source-based projects.
 
+Click [here](https://steamcommunity.com/sharedfiles/filedetails/?id=3388358051) to view this on the Steam Workshop
+
 ## Using the samples
 
 Simply clone this repo into your custom folder, or download using Github.
