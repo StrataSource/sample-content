@@ -8,13 +8,13 @@
 local scope = Storage.CreateScope("my-cool-and-unique-adodn");
 
 // Set some values
-scope.SetValue("test1", "Hello, world!");
+scope.SetString("test1", "Hello, world!");
 scope.SetInt("test2", 123);
 scope.SetFloat("test3", 32.32333);
 scope.SetVector("test4", Vector(1,2,3));
 
 // Get some values
-printl("test1: " + scope.GetValue("test1"));
+printl("test1: " + scope.GetString("test1"));
 printl("test2: " + scope.GetInt("test2"));
 printl("test3: " + scope.GetFloat("test3"));
 printl("test4: " + scope.GetVector("test4"));
