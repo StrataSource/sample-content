@@ -1,6 +1,6 @@
 // Demonstrates ConVar refs
 
-[ClientCommand("my_cvarref_demo")]
+[ClientCommand("cl_example_cvarref")]
 void MyCvarRefDemo(const CommandArgs@ args)
 {
 	ConVarRef intensity("r_portal_light_intensity");
@@ -11,7 +11,7 @@ void MyCvarRefDemo(const CommandArgs@ args)
 	intensity.SetValue(1);
 	Msg("New val: " + intensity.GetFloat() + "\n");
 
-	ConVarRef invalid("my_invalid_thingy");
-	Msg("is my_invalid_thingy valid? " + invalid.IsValid() + "\n");
+	ConVarRef invalid_cvar("my_invalid_thingy");
+	Msg("is my_invalid_thingy valid? " + invalid_cvar.IsValid() + "\n");
 }
 
