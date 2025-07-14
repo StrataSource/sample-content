@@ -1,12 +1,12 @@
 // Demonstrates the usage of the ServerCommand and ClientCommand attributes
 
-[ServerCommand("sv_my_server_command", "A fun and awesome server command")]
+[ServerCommand("sv_example_server_command", "A fun and awesome server command")]
 void MyCommand(const CommandArgs@ args)
 {
 	Msg("This is my server command, called from the server\n");
 }
 
-[ClientCommand("cl_my_client_command", "A fun and awesome cheat client command", FCVAR_CHEAT)]
+[ClientCommand("cl_example_client_command", "A fun and awesome cheat client command", FCVAR_CHEAT)]
 void MyClientCommand(const CommandArgs@ args)
 {
 	if (args.ArgC() < 2)
