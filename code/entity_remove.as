@@ -26,7 +26,7 @@ class PropRemoveSelf : CBaseAnimating
 
         CBaseAnimating@ anim = cast<CBaseAnimating@>(this);
         CBaseEntity@ ent = cast<CBaseEntity@>(anim);
-        Utility::Remove(ent);
+        util::Remove(ent);
     }
 
     [Input("ClassRemove")]
