@@ -1,5 +1,12 @@
-// Demonstration of the persistent storage API
-// This implementation closely mirrors the VScript API, except there is no ScriptStorageScopeMgr
+//-----------------------------------------------------------------------------------------
+// Purpose: Demonstrates how to use the persistent storage API. This implementation closely
+//  mirrors the VScript implementation, and the two scripting systems share a backend.
+//  This system may be used to store data in a common area where both VScript and AngelScript
+//  can access it.
+//  This data is NOT networked and is only stored locally!
+//
+// SPDX-License-Identifier: MIT
+//-----------------------------------------------------------------------------------------
 
 [ClientCommand("cl_example_storage_show", "Example of how to show script storage data")]
 void ShowScriptStorage(CommandArgs@ args)

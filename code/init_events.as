@@ -1,4 +1,9 @@
-// Demonstrates the init/shutdown events
+//-----------------------------------------------------------------------------------------
+// Purpose: Demonstrates/tests various core event types. These are invoked during the game
+//  init process.
+//
+// SPDX-License-Identifier: MIT
+//-----------------------------------------------------------------------------------------
 
 [LevelInitPreEntity]
 void OnLevelInitPreEntity()

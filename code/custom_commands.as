@@ -1,4 +1,9 @@
-// Demonstrates the usage of the ServerCommand and ClientCommand attributes
+//-----------------------------------------------------------------------------------------
+// Purpose: Demonstrates how to use ServerCommand and ClientCommand attributes to register
+//  custom commands.
+//
+// SPDX-License-Identifier: MIT
+//-----------------------------------------------------------------------------------------
 
 [ServerCommand("sv_example_server_command", "A fun and awesome server command")]
 void MyCommand(const CommandArgs@ args)
