@@ -12,7 +12,7 @@
 [ServerCommand("sv_firegameevent_server", "")]
 void sv_firegameevent_server(const CommandArgs@ args)
 {
-    GameEvent@ event = gGameEventManager.CreateEvent("player_spawn");
+    GameEvent@ event = GameEventManager().CreateEvent("player_spawn");
 
     event.SetBool("BoolValue", true);
     event.SetInt("IntValue", 42);
@@ -20,13 +20,13 @@ void sv_firegameevent_server(const CommandArgs@ args)
     event.SetFloat("FloatValue", 3.141592);
     event.SetString("StringValue", "suspicious imposter");
 
-    gGameEventManager.FireEvent(event);
+    GameEventManager().FireEvent(event);
 }
 
 [ServerCommand("sv_firegameevent_client", "")]
 void sv_firegameevent_client(const CommandArgs@ args)
 {
-    GameEvent@ event = gGameEventManager.CreateEvent("player_spawn");
+    GameEvent@ event = GameEventManager().CreateEvent("player_spawn");
 
     event.SetBool("BoolValue", true);
     event.SetInt("IntValue", 42);
@@ -34,7 +34,7 @@ void sv_firegameevent_client(const CommandArgs@ args)
     event.SetFloat("FloatValue", 3.141592);
     event.SetString("StringValue", "suspicious imposter");
 
-    gGameEventManager.FireEventClientSide(event);
+    GameEventManager().FireEventClientSide(event);
 }
 
 [GameEvent("player_spawn")]
