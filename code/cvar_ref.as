@@ -1,4 +1,10 @@
-// Demonstrates ConVar refs
+//--------------------------------------------------------------------------//
+// Purpose: Demonstrates ConVar refs. These are the preferred way to interact
+//  with ConVars, and the only way to interact with ones registered outside 
+//  of your script.
+//
+// SPDX-License-Identifier: MIT
+//--------------------------------------------------------------------------//
 
 [ClientCommand("cl_example_cvarref")]
 void MyCvarRefDemo(const CommandArgs@ args)

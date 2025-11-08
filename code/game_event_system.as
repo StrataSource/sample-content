@@ -1,7 +1,18 @@
+//-----------------------------------------------------------------------------------------
+// Purpose: Demonstrates how to use the GameEventManager system to fire and listen for
+//  game events. Game events are optionally networked and are ordinarily used to communicate
+//  server data to the client for display on the UI.
+//  Event networking is unidirectional, always going from server -> client. Events fired on
+//  the client-side are not sent to the server. Events on the server may also be fired with
+//  the 'bBroadcast' parameter set to false to prevent them from being networked.
+// 
+// SPDX-License-Identifier: MIT
+//-----------------------------------------------------------------------------------------
+
 [ServerCommand("sv_firegameevent_server", "")]
 void sv_firegameevent_server(const CommandArgs@ args)
 {
-    GameEvent@ event = global::GameEventManager.CreateEvent("player_spawn");
+    GameEvent@ event = GameEventManager().CreateEvent("player_spawn");
 
     event.SetBool("BoolValue", true);
     event.SetInt("IntValue", 42);
@@ -9,13 +20,13 @@ void sv_firegameevent_server(const CommandArgs@ args)
     event.SetFloat("FloatValue", 3.141592);
     event.SetString("StringValue", "suspicious imposter");
 
-    global::GameEventManager.FireEvent(event);
+    GameEventManager().FireEvent(event);
 }
 
 [ServerCommand("sv_firegameevent_client", "")]
 void sv_firegameevent_client(const CommandArgs@ args)
 {
-    GameEvent@ event = global::GameEventManager.CreateEvent("player_spawn");
+    GameEvent@ event = GameEventManager().CreateEvent("player_spawn");
 
     event.SetBool("BoolValue", true);
     event.SetInt("IntValue", 42);
@@ -23,7 +34,7 @@ void sv_firegameevent_client(const CommandArgs@ args)
     event.SetFloat("FloatValue", 3.141592);
     event.SetString("StringValue", "suspicious imposter");
 
-    global::GameEventManager.FireEventClientSide(event);
+    GameEventManager().FireEventClientSide(event);
 }
 
 [GameEvent("player_spawn")]

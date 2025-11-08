@@ -1,3 +1,10 @@
+//-----------------------------------------------------------------------------------------
+// Purpose: Demonstrates a custom entity that spawns itself and removes itself when an
+//  input is triggered.
+//
+// SPDX-License-Identifier: MIT
+//-----------------------------------------------------------------------------------------
+
 [Entity("prop_remove_self")]
 class PropRemoveSelf : CBaseAnimating
 {
