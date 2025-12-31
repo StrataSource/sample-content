@@ -6,7 +6,10 @@
 
 // Only print this message once, on the server :)
 #if SERVER
-Msg("Sample content has been loaded in this game session\n");
+[LevelInitPreEntity]
+void OnInit() {
+	Msg("Sample content has been loaded in this game session\n");
+}
 #endif
 
 // Include our server-side only scripts
