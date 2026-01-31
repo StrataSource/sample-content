@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------------------------------
 
 [ClientCommand("cl_example_storage_show", "Example of how to show script storage data")]
-void ShowScriptStorage(CommandArgs@ args)
+void ShowScriptStorage(const CommandArgs@ args)
 {
 	// Create a storage scope that references "myTest"
 	StorageScope s("myTest");
@@ -21,7 +21,7 @@ void ShowScriptStorage(CommandArgs@ args)
 }
 
 [ClientCommand("cl_example_storage_set", "Example of how to set script storage")]
-void SetScriptStroage(CommandArgs@ args)
+void SetScriptStroage(const CommandArgs@ args)
 {
 	// Set the values. These will persist across map loads and game restarts, until set or cleared again
 	StorageScope s("myTest");
@@ -31,7 +31,7 @@ void SetScriptStroage(CommandArgs@ args)
 }
 
 [ClientCommand("cl_example_storage_clear", "Clear stuff")]
-void ScriptStorageClear(CommandArgs@ args)
+void ScriptStorageClear(const CommandArgs@ args)
 {
 	// Clear all entries in the myTest storage scope
 	StorageScope s("myTest");
