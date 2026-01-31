@@ -6,7 +6,7 @@
 //-----------------------------------------------------------------------------------------
 
 [ServerCommand("sv_test_entity_iterator", "")]
-void EntityIteratorExample(CommandArgs@ args)
+void EntityIteratorExample(const CommandArgs@ args)
 {
     // Print a list of all func_brushes in the map
     Msg("All func_brushes in this map:\n");
